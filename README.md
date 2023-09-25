@@ -37,7 +37,7 @@ The SFA's results are saved in the output folder.
 Για την είσοδο των αρχικών συνθηκών υπάρχουν 2 ρουτίνες :
  
 1) Η ρουτίνα ads.py χρησιμοποιείται για την εισαγωγή των δεδομένων που αφορούν τα αιωρούμενα σωματίδια from 
-[GitHub Pages]( https://ads.atmosphere.copernicus.eu/cdsapp#!/dataset/cams-global-atmospheric-composition-forecasts?tab=form).
+[CAMS global atmospheric composition forecasts](https://ads.atmosphere.copernicus.eu/cdsapp#!/dataset/cams-global-atmospheric-composition-forecasts?tab=form).
 
 . 
 
