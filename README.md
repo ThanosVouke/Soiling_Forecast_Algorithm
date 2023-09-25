@@ -1,9 +1,9 @@
-# Soiling_Forecast_Algorithm
+# Soiling_Forecast_Algorithm2
 
 ## In this study, a new soiling forecast algorithm is proposed to 
 predict the accumulation of dust on the mirrors of a PTC plant. 
 
-This soiling model is based on existing models for the dry deposition of dust over geographic regions.
+# This soiling model is based on existing models for the dry deposition of dust over geographic regions.
 
 The scope of this paper is to develop a new soiling forecast algorithm for a PTC system installed in Limassol, 
 Cyprus's largest soft drink factory, KEAN, in order to predict its reflectivity by estimating the soiling rate.
