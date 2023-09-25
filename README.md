@@ -1,6 +1,6 @@
 # Soiling_Forecast_Algorithm
 
-In this study, a new soiling forecast algorithm is proposed to 
+## In this study, a new soiling forecast algorithm is proposed to 
 predict the accumulation of dust on the mirrors of a PTC plant. 
 
 This soiling model is based on existing models for the dry deposition of dust over geographic regions.
