@@ -23,7 +23,7 @@ The SFA's results are saved in the output folder.
 
 
 -------------------------------------------------------------------------------------------------------------------------
-					**Φάκελος src** - Επεξήγηση των ρουτινών
+					__Φάκελος src__ - Επεξήγηση των ρουτινών
 
 -> Το αρχείο Ref_optima.py αποτελεί τον πηγαίο κώδικα. Μέσα σε αυτόν εκτελούνται όλες οι διαδικασίες εκτίμησης
     της ανακλαστικότητας.
@@ -38,7 +38,7 @@ The SFA's results are saved in the output folder.
 Για την είσοδο των αρχικών συνθηκών υπάρχουν 2 ρουτίνες :
  
 1) Η ρουτίνα ads.py χρησιμοποιείται για την εισαγωγή των δεδομένων που αφορούν τα αιωρούμενα σωματίδια from 
-[GitHub Pages](https://pages.github.com/).
+[GitHub Pages]( https://ads.atmosphere.copernicus.eu/cdsapp#!/dataset/cams-global-atmospheric-composition-forecasts?tab=form).
 
 . 
 
