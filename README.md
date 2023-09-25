@@ -55,3 +55,9 @@ The SFA's results are saved in the output folder.
 θα πρέπει να βάλετε στον φάκελο data τις κατάλληλα δεδομένα. Είναι η μοναδική διαδικασία που απαιτείται για την προσομοίωση. 
 Μετά από αυτό το βήμα, όπως και παραπάνω, ανοίγεται τον πηγαίο κώδικα Ref_optima.py και πατάτε Run. Ομοίως τα αποτελέσματα σας θα 
 αποθηκευτούν στον φάκελο output.
+
+---------------------------------------------------------------------------------------------------------------------------
+Anticipating results according the respective plots:
+
+A) Reflectivity estimation:
+![alt text](https://github.com/ThanosVouke/Soiling_Forecast_Algorithm/blob/main/output/Plots/SR_3_June_2019.jpg?raw=true)
