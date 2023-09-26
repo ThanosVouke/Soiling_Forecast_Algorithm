@@ -1,64 +1,60 @@
-# Soiling_Forecast_Algorithm2
+# Soiling_Forecast_Algorithm
 
-In this study, a new soiling forecast algorithm is proposed to 
-predict the accumulation of dust on the mirrors of a PTC plant. 
+The scope of this project is to develop a new soiling forecast algorithm for a Parabolic Through Collector
+(PTC) system installed in Limassol, Cyprus's largest soft drink factory, KEAN,
+in order to predict its reflectivity by estimating the soiling rate.
 
-This soiling model is based on existing models for the dry deposition of dust over geographic regions.
-
-The scope of this paper is to develop a new soiling forecast algorithm for a PTC system installed in Limassol, 
-Cyprus's largest soft drink factory, KEAN, in order to predict its reflectivity by estimating the soiling rate.
-
-The physical mechanisms and the equations that are calculated are derived from existing atmospheric dust transport models and 
+The physical mechanisms and the equations that are calculated in this soiling model are derived from
+existing atmospheric dust transport models considering the dry deposition of dust over geographic regions, and
 have been applied to the problem of the soiling of parabolic through collector mirrors (PTC). 
 
-Tο μοντέλο βρίσκεται αποθηκευμένο στον φάκελο src.
+The SFA model is located in **src** folder.
 
-Στον φάκελο data βρίσκονται αποθηκευμένα τα δεδομένα που χρησιμοποιούνται σαν είσοδο στο μοντέλο. Υπάρχουν 2 υποφάκελοι:
-1) Meteorological_Data containing the meteorological input data and,
-2) ΡΜ which contains the particulate matter's input data.
-Furthrmore, in data folder are located also the relfectivity measurements which are utilized for the validation of the model's 
-outcomes. 
+In order to make a soiling forecast estimation possible, meteorological and particulate matter data are required. 
+In the **data** folder are situated the respective input data that was utilized as inputs in the model. There are 2 subfolders:
+1. Meteorological_Data containing the meteorological input data and
+2. ΡΜ, which contains the particulate matter's input data.
+Further, in the **data** folder are also located the relfectivity measurements, which are utilized for the validation of the model's
+outcomes. 
 
-The SFA's results are saved in the output folder. 
+SFA's results are saved in the **output** folder. 
 
 
-## Φάκελος src - Επεξήγηση των ρουτινών
+## src folder - Explanation of scripts
 
-- Το αρχείο Ref_optima.py αποτελεί τον πηγαίο κώδικα. Μέσα σε αυτόν εκτελούνται όλες οι διαδικασίες εκτίμησης
-    της ανακλαστικότητας.
+- The ref_optima.py file constitutes the main script of the SFA. In this particular Python code, the procedure of reflectivity
+prediction is executed with a 4-day time step.
 
-- Το model_parameters.py περιέχει όλες τις μεταβλητές που λαμβάνονται σαν είσοδο στο μοντέλο.
+- The **model_parameters.py** contains all the necessary parameters of the model. 
 
-+ Το constants.py περιλαμβάνει διάφορες σταθερές.
+- The **constants.py** contains constant variables.
 
-* Η ρουτίνα functions_optima.py περιέχει όλες τις συναρτήσεις που χρησιμοποιούνται στον πηγαίο κώδικα. Αυτές οι συναρτήσεις 
-   χρησιμοποιούνται για τον υπολογισμό σημαντικών μεταβλητών του μοντέλου. 
+- The **functions_optima.py** script contains the formulas and the respective functions for the computation of each soiling mechanism.
 
-Για την είσοδο των αρχικών συνθηκών υπάρχουν 2 ρουτίνες :
+For the importation of the input data, two scripts were utilized:
  
-1) Η ρουτίνα ads.py χρησιμοποιείται για την εισαγωγή των δεδομένων που αφορούν τα αιωρούμενα σωματίδια from 
-[CAMS global atmospheric composition forecasts](https://ads.atmosphere.copernicus.eu/cdsapp#!/dataset/cams-global-atmospheric-composition-forecasts?tab=form).
+1) The **ads.py** script is used so that the particulate matter's data can be imported into the main script. The respective data are
+derived from the [CAMS global atmospheric composition forecasts](https://ads.atmosphere.copernicus.eu/cdsapp#!/dataset/cams-global-atmospheric-composition-forecasts?tab=form). 
 
-. 
-
-2) Αντίστοιχα το αρχείο merge_files.py χρησιμοποιείται για την εισαγωγή των μετεωρολογικών δεδομένων.                              
+2) Accordingly, the **file merge_files.py** is used for the importation of the meteorological conditions.                             
 
 
-					      ## Εκτέλεση του αλγορίθμου 
+## Execution 
 
-Το μοντέλο εκτελείται απο τον πηγαίο κώδικα Ref_optima.py. Ανοίγετε τον αλγόριθμο μέσω ενός compiler πχ Spyder και στην συνέχεια
-πατάτε Run. Τα αποτελέσματα θα αποθηκευτούν στον φάκελο outputs. Επίσης στην οθόνη θα εμφανιστούν όλες οι γραφικές παραστάσεις. 
+The model can be executed through the main script **Ref_optima.py** by opening and running the 
+code through a Python compiler (i.e., Spyder or PyCharm). It should be mentioned that this step is conditional 
+on the respective Python compiler that the user utilizes.
+The results are saved in the **outputs** folder.
 
-!!ΠΡΟΣΟΧΗ!! Αν έχετε τρέξει ήδη μια φορά αυτή την προσομοίωση θα πρέπει να διαγράψετε τα αρχεία από τον φάκελο output και τον 
-φάκελο Plots αν θέλετε να την ξανατρέξετε καθώς η Python δεν επιτρέπει να γίνεται overwrite στα αρχεία.  
 
+## Planning a simulation
 
-					 ## Εκτέλεση του αλγορίθμου- σχεδιασμός προσομοίωσης
-
-Το μοντέλο είναι στημένο για μια συγκεκριμένη πρόγνωση. Αν επιθυμείτε να σχεδιάσετε μια προσομοίωση εξ ολοκλήρου από την αρχή 
-θα πρέπει να βάλετε στον φάκελο data τις κατάλληλα δεδομένα. Είναι η μοναδική διαδικασία που απαιτείται για την προσομοίωση. 
-Μετά από αυτό το βήμα, όπως και παραπάνω, ανοίγεται τον πηγαίο κώδικα Ref_optima.py και πατάτε Run. Ομοίως τα αποτελέσματα σας θα 
-αποθηκευτούν στον φάκελο output.
+In this case, the model is prepared for a specific case study. If you want to plan a new simulation from scratch, you must execute the 
+next important steps: 
+1. Import the input conditions in the **data** folder.
+2. If your simulation does not concern this particular PTC system, you must change the respective location features (i.e., latitude).
+After the completion of the above-required steps, the model will be executed through **Ref_optima.py** 
+where the results will be shown in the **output** folder.
 
 ---------------------------------------------------------------------------------------------------------------------------
 Anticipating results according the respective plots:
