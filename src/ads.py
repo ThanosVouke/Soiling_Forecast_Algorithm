@@ -8,7 +8,7 @@ pwd = os.getcwd()
 SRC_DIR = os.path.dirname(__file__)
 PARENT_DIR = os.path.dirname(SRC_DIR)
 
-#%% first model 
+#______________first model_____________________ 
 
 
 path = os.path.join(PARENT_DIR, "data/PM/sfc")
@@ -45,11 +45,11 @@ ads1['pm']=ads1['pm10'] - ads1['pm2p5']
 
 
 
-ads1 = ads1[~ads1.index.duplicated(keep='first')]   # diwnxei ta dyplicates, einai SOS entoli 
+ads1 = ads1[~ads1.index.duplicated(keep='first')]   # drop duplicates 
 
 
 
-#%% second model 
+#______________second model______________________ 
 
 path = os.path.join(PARENT_DIR, "data/PM/ml")
 
@@ -65,7 +65,7 @@ for i in  tqdm.tqdm(all_filenames):
     df = nc.to_dataframe()
     df_list.append(df)
 
-ads2 =  pd.concat(df_list)  # ta vazei ola se ena arxeio 
+ads2 =  pd.concat(df_list)  
 
 
 ads2 = ads2.reset_index('latitude')
